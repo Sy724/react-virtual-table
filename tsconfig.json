@@ -1,0 +1,15 @@
+{
+  "include": [
+    "src",
+    "./index.d.ts"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "target": "ES5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom", "es2019"],
+    "strict": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  },
+}

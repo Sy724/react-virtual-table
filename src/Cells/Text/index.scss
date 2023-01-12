@@ -1,0 +1,11 @@
+.cells-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.href-text {
+  color: dodgerblue;
+  cursor: pointer;
+}
