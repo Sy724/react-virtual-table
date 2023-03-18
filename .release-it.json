@@ -1,8 +1,0 @@
-{
-  "github": {
-    "release": true
-  },
-  "git": {
-    "commitMessage": "Release: v${version}"
-  }
-}

@@ -1,28 +1,25 @@
 {
-  "name": "my-virtual-table",
-  "version": "1.0.0",
-  "description": "virtual table",
-  "main": "index.js",
+  "name": "react_demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sy724/my-virtual-table.git"
-  },
-  "keywords": [],
-  "author": "shi.yuan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sy724/my-virtual-table/issues"
-  },
-  "homepage": "https://github.com/Sy724/my-virtual-table#readme",
-  "publicConfig": {
-    "access": "publish",
-    "registry": "http://registry.npmjs.org/"
+  "dependencies": {
+    "@types/lodash-es": "^4.17.7",
+    "ahooks": "^3.7.5",
+    "lodash-es": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "release-it": "^15.6.0"
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
   }
 }
