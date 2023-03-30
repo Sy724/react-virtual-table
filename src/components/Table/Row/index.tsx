@@ -24,6 +24,7 @@ function Row<T>(props: {
               whiteSpace: "nowrap",
               textOverflow: "ellipsis",
               padding: '2px',
+              textAlign: column.align,
             }}>
             <span>
               {column.render(record)}

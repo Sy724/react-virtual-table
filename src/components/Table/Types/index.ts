@@ -4,6 +4,7 @@ export interface ColumnsProps<T> {
   title: string;
   key: string;
   width: string;
+  align?: 'left' | 'center' | 'right';
   render: (record: T) => ReactNode;
 }
 

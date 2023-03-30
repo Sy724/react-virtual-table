@@ -72,24 +72,28 @@ function Table<T>({
           maxHeight: scroll?.y,
         }}>
           {/* todo 表头、grid 布局*/}
-          {/*<div style={{*/}
-          {/*  display: 'flex',*/}
-          {/*  alignItems: 'center',*/}
-          {/*}}>*/}
-          {/*  {*/}
-          {/*    columns.map(column => (*/}
-          {/*      <div key={`tableHeader-${column.key}`} style={{*/}
-          {/*        width: column.width,*/}
-          {/*        backgroundColor: '#e9edf2',*/}
-          {/*        padding: '2px',*/}
-          {/*        height: itemHeight,*/}
-          {/*        position: 'sticky',*/}
-          {/*      }}>*/}
-          {/*        {column.title}*/}
-          {/*      </div>*/}
-          {/*    ))*/}
-          {/*  }*/}
-          {/*</div>*/}
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            position: 'sticky',
+            top: 0,
+            zIndex: '100'
+          }}>
+            {
+              columns.map(column => (
+                <div key={`tableHeader-${column.key}`} style={{
+                  width: column.width,
+                  backgroundColor: '#e9edf2',
+                  padding: '2px',
+                  textAlign: column.align,
+                  height: `${itemHeight}px`,
+                  lineHeight: `${itemHeight}px`,
+                }}>
+                  {column.title}
+                </div>
+              ))
+            }
+          </div>
           <div style={{
             transform: `translate3d(0, ${state.currentOffset}px, 0)`,
             position: 'relative', left: 0, top: 0, right: 0,

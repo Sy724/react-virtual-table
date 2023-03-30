@@ -20,6 +20,7 @@ const TableDemo = () => {
       title: '名称',
       key: 'name',
       width: '100px',
+      align: 'left',
       render: record => (
         <span>{record?.name}</span>
       )
@@ -28,6 +29,7 @@ const TableDemo = () => {
       title: '年龄',
       key: 'age',
       width: '80px',
+      align: 'right',
       render: record => (
         <span>{record?.age}</span>
       )
