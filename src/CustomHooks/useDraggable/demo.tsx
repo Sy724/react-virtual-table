@@ -22,9 +22,10 @@ const DraggableDemo = () => {
           alignItems: 'center',
           borderRadius: '40px',
           backgroundColor: 'darkred',
+          // @ts-ignore
           transform:`translate(${style.x}px, ${style.y}px)`
         }}
-        ref={dropRef}
+        ref={dropRef as any}
       >
         <span>dropBox</span>
       </div>

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {ColumnsProps} from "../../components/Table/Types";
-import Table from "../../components/Table";
+import Table from "../../components/Table"
 import {DateRecord} from "./types";
 
 const TableDemo = () => {
@@ -19,7 +19,7 @@ const TableDemo = () => {
     {
       title: '名称',
       key: 'name',
-      width: '100px',
+      width: 100,
       align: 'left',
       render: record => (
         <span>{record?.name}</span>
@@ -28,12 +28,28 @@ const TableDemo = () => {
     {
       title: '年龄',
       key: 'age',
-      width: '80px',
+      width: 100,
       align: 'right',
       render: record => (
         <span>{record?.age}</span>
       )
-    }
+    },
+    {
+      title: '名称2',
+      key: 'name1',
+      align: 'center',
+      render: record => (
+        <span>{record?.name}</span>
+      )
+    },
+    {
+      title: '年龄',
+      key: 'age1',
+      align: 'center',
+      render: record => (
+        <span>{(record?.age || 0) * 2}</span>
+      )
+    },
   ];
   
   return (

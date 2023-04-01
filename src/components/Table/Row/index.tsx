@@ -3,27 +3,14 @@ import {ColumnsProps} from "../Types";
 function Row<T>(props: {
   record: T;
   columns: ColumnsProps<T>[];
-  itemHeight: number;
 }) {
-  const { record, columns, itemHeight } = props;
+  const { record, columns } = props;
   return (
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      flexWrap: "nowrap",
-      height: itemHeight,
-    }}>
+    <div role="tableRow">
       {
         columns.map(column => {
           return (
-            <div key={column.key} style={{
-              width: column.width,
-              display: "flex",
-              alignItems: "center",
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
-              padding: '2px',
+            <div key={column.key} className="Cells" style={{
               textAlign: column.align,
             }}>
             <span>

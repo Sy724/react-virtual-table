@@ -3,8 +3,9 @@ import React, {ReactNode} from "react";
 export interface ColumnsProps<T> {
   title: string;
   key: string;
-  width: string;
+  width?: number;
   align?: 'left' | 'center' | 'right';
+  fixed?: 'left' | 'right';
   render: (record: T) => ReactNode;
 }
 

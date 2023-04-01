@@ -40,7 +40,7 @@ const useDraggable = () => {
   }, []);
   
   useLayoutEffect(() => {
-    const dom = currentDom.current;
+    const dom = currentDom.current as ReactElement;
     // @ts-ignore
     dom.ondragstart = ontouchstart;
     // @ts-ignore
