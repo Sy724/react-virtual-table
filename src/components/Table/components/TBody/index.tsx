@@ -19,6 +19,7 @@ function Tbody<T>(props: Props<T>) {
   
   return (
     <div role="tableBody" style={{
+      willChange: 'transform, position',
       transform: `translate3d(0, ${currentOffset}px, 0)`,
       position: 'relative', left: 0, top: 0, right: 0,
     }}>

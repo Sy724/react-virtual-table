@@ -15,6 +15,7 @@ function Table<T>({
   dataSource = [],
   itemHeight = 48,
   scroll = { y: '100%' },
+  bordered = false,
 }: TableProps<T>) {
   
   const tableState = useReactive<{
@@ -47,6 +48,7 @@ function Table<T>({
         columns={columns}
         itemHeight={itemHeight}
         tableId={tableId}
+        bordered={bordered}
       />
       <div ref={wrapperRef} id={tableId}>
         {/* 占位，列表总高度 */}

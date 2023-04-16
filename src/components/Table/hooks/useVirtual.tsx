@@ -43,7 +43,7 @@ export function useVirtual<T>({
   useLayoutEffect(() => {
     const { offsetHeight } = wrapperRef.current as HTMLDivElement;
     state.scrollAllHeight = offsetHeight;
-    state.renderCount = Math.ceil(offsetHeight / itemHeight) + 1;
+    state.renderCount = Math.ceil(offsetHeight / itemHeight) - 1; // 表头造成的影响
     state.listHeight = dataSource.length * itemHeight;
     state.data = dataSource.slice(0, state.renderCount);
   }, [wrapperRef?.current?.offsetHeight, dataSource?.length])

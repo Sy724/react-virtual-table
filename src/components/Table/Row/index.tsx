@@ -13,9 +13,7 @@ function Row<T>(props: {
             <div key={column.key} className="Cells" style={{
               textAlign: column.align,
             }}>
-            <span>
               {column.render(record)}
-            </span>
             </div>
           )
         })

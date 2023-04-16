@@ -8,6 +8,7 @@ interface Props<T> {
   columns: ColumnsProps<T>[]
   itemHeight: number;
   clientWidth?: number;
+  bordered?: boolean;
 }
 function Style<T>(props: Props<T>) {
   const {
@@ -15,6 +16,7 @@ function Style<T>(props: Props<T>) {
     columns: columnsProps,
     itemHeight,
     tableId,
+    bordered,
   } = props;
   
   
@@ -32,9 +34,19 @@ function Style<T>(props: Props<T>) {
           height: ${itemHeight}px;
           line-height: ${itemHeight}px;
           padding: 2px;
+          border-right: ${bordered ? '1px solid #f0f0f0' : 'none'};
+          white-space: nowrap;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
         #${tableId} [role=table] {
-          width: ${totalWidth}px
+          width: ${totalWidth}px;
+          border-bottom: ${bordered ? '1px solid #f0f0f0' : 'none'};
+        }
+        
+        #${tableId} [role=tableBody] [role=tableRow]:last-child {
+          border-bottom: none;
         }
         
         #${tableId} [role=tableHeader],
@@ -47,6 +59,18 @@ function Style<T>(props: Props<T>) {
           overflow: hidden;
           whiteSpace: nowrap;
           textOverflow: ellipsis;
+          border-bottom: ${bordered ? '1px solid #f0f0f0' : 'none'};
+        }
+        
+        #${tableId} [role=tableHeader] .Cells:last-child {
+          border-right: none;
+        }
+        #${tableId} [role=tableRow] .Cells:last-child {
+          border-right: none;
+        }
+        
+        #${tableId} [role=tableRow]:hover .Cells {
+          background: #f5f5f5
         }
         
         #${tableId} .tableHeader {
@@ -58,8 +82,8 @@ function Style<T>(props: Props<T>) {
         
         
         #${tableId} [role=tableFill] {
-          ppsition: relative;
-          z-inde: -1;
+          position: relative;
+          z-index: -1;
           background-color: transparent;
         }
       `}

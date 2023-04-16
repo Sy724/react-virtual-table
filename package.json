@@ -12,6 +12,7 @@
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^18.15.11",
     "ahooks": "^3.7.5",
+    "antd": "^5.4.2",
     "classnames": "^2.3.2",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",

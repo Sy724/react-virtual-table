@@ -1,5 +1,7 @@
 export interface DateRecord {
   id: number;
   name?: string;
-  age?: number;
+  address?: string;
+  index?: number;
+  random?: number;
 }

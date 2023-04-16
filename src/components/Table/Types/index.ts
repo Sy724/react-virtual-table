@@ -20,4 +20,5 @@ export interface TableProps<T> {
     x?: string;
     y?: string;
   };
+  bordered?: boolean;
 }
