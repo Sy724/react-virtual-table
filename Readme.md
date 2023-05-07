@@ -18,14 +18,14 @@ Demo：http://116.62.27.184/table/
 
 #### Table
 
-| 参数               | 是否必须  | 说明                             |
-|:-----------------|:------|:-------------------------------|
-| rowKey           | true  | 表格行 key 的取值，可以是字符串或一个函数        |
-| columns          | true  | 表格列的配置描述，具体项见下表                |
-| dataSource       | false | 表格填充数据，与 serverDataSource 选填一个 |
-| serverDataSource | false | 获取列表数据的接口调用，与 dataSource 选填一个  |
-| scroll           | true  | 格式见使用方式，设置列表的需要开始滚动的视图高度       |
-| borderd          | false | 列表边框                           |
+| 参数               | 是否必须  | 说明                                                           |
+|:-----------------|:------|:-------------------------------------------------------------|
+| rowKey           | true  | 表格行 key 的取值，可以是字符串或一个函数                                      |
+| columns          | true  | 表格列的配置描述，具体项见下表                                              |
+| dataSource       | false | 表格填充数据，与 serverDataSource 选填一个                               |
+| serverDataSource | false | 获取列表数据的接口调用，与 dataSource 选填一个                                |
+| scroll           | true  | 格式见使用方式，设置列表的需要开始滚动的视图高度（数据类型：100px、50vh、calc(100vh - 200px) |
+| borderd          | false | 列表边框                                                         |
 
 
 #### columns
