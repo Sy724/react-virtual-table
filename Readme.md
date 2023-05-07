@@ -41,6 +41,45 @@ Demo：http://116.62.27.184/table/
 
 ### 使用方式：
 
+```js
+const columns: ColumnsProps<DateRecord>[] = [
+  {
+    title: '序号',
+    key: 'index',
+    width: 100,
+    align: state.textAlign,
+    render: record => (
+      <span>{record?.index}</span>
+    )
+  },
+  {
+    title: '名称',
+    key: 'name',
+    width: 200,
+    align: state.textAlign,
+    render: record => (
+      <span>{record?.name}</span>
+    )
+  },
+  {
+    title: '地址',
+    key: 'address',
+    align: state.textAlign,
+    render: record => (
+      <span>{record?.address}</span>
+    )
+  },
+  {
+    title: '随机数',
+    key: 'random',
+    align: state.textAlign,
+    render: record => (
+      <span>{`随机数：${record?.random}`}</span>
+    )
+  },
+];
+```
+
 ```jsx
 <Table<DateRecord>
   rowKey="id"
