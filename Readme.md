@@ -82,9 +82,10 @@ const columns: ColumnsProps<DateRecord>[] = [
 
 ```jsx
 <Table<DateRecord>
+  bordered={state.bordered}
   rowKey="id"
   columns={columns}
   dataSource={list}
-  scroll={{ y: '100vh' }}
-/>
+  scroll={{ y: state.tableScroll }}
+  />
 ```
