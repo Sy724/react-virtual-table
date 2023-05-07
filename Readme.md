@@ -1,4 +1,4 @@
-## my-virtual-table
+## react-virtual-table
 
 项目是使用 Vite + React + TS 搭建的虚拟列表项目。
 
